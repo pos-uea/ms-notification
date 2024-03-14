@@ -87,12 +87,12 @@ jobs:
   #     - name: run e2e tests
   #       run: docker compose -f docker-compose.ci.yaml exec -T app npm run test:e2e -- --runInBand --detectOpenHandles --forceExit
 
-      - name: Bump version and push tag
-        id: tagging
-        if: github.event_name != 'pull_request'
-        uses: mathieudutour/github-tag-action@v6.1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Bump version and push tag
+      #   id: tagging
+      #   if: github.event_name != 'pull_request'
+      #   uses: mathieudutour/github-tag-action@v6.1
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build prod version and push
         id: build-final
