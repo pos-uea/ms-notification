@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-nofification
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-nofification
+  template:
+    metadata:
+      labels:
+        app: app-nofification
+        version: latest
+    spec:
+      containers:
+      - name: app-nofification
+        image: manscalh/app-nofification:latest
+        imagePullPolicy: Always
+        resources:
+        ports:
+        - containerPort: 3001
