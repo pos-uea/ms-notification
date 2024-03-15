@@ -12,6 +12,8 @@ const protocol = process.env.RMQ_PROTOCOLO
 
 async function bootstrap() {
 
+  console.log(`${protocol}://${user}:${password}@${host}`);
+
   const app = await NestFactory.createMicroservice(AppModule,
     {
       transport: Transport.RMQ,
@@ -25,6 +27,8 @@ async function bootstrap() {
   
   await app.listen().then(() => {
     Logger.log('Microservice is listening',process.env.NODE_ENV,process.env.RMQ_URL);
-  })
+  }).catch((error) => {
+    Logger.error('Microservice is not listening', error);
+  });
 }
 bootstrap();

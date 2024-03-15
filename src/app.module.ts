@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { NotificationService } from './notification/notification.service';
 import { NotificationModule } from './notification/notification.module';
 import { ProxyRMQModule } from './common/proxyrmq/client-proxy';
 import { MailerModule } from '@nestjs-modules/mailer';
