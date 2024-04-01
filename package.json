@@ -8,10 +8,10 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "NODE_ENV=production OTEL_EXPORTER_OTLP_HEADERS='signoz-access-token=fa656df4-9936-445e-a287-5c184c3917b8' nest start",
-    "start:dev": "NODE_ENV=develpment OTEL_EXPORTER_OTLP_HEADERS='signoz-access-token=fa656df4-9936-445e-a287-5c184c3917b8' nest start --watch",
+    "start": "NODE_ENV=production OTEL_EXPORTER_OTLP_HEADERS='signoz-access-token=fd5fac21-bca4-46d1-b26c-3681473152b5' nest start",
+    "start:dev": "NODE_ENV=develpment OTEL_EXPORTER_OTLP_HEADERS='signoz-access-token=fd5fac21-bca4-46d1-b26c-3681473152b5' nest start --watch",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "OTEL_EXPORTER_OTLP_HEADERS='signoz-access-token=fa656df4-9936-445e-a287-5c184c3917b8' node dist/main",
+    "start:prod": "OTEL_EXPORTER_OTLP_HEADERS='signoz-access-token=fd5fac21-bca4-46d1-b26c-3681473152b5' node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
