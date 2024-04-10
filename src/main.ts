@@ -1,3 +1,4 @@
+const tracer = require('./tracer')
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { Logger } from '@nestjs/common';
@@ -11,6 +12,8 @@ const host = process.env.RMQ_URL
 const protocol = process.env.RMQ_PROTOCOLO
 
 async function bootstrap() {
+
+  await tracer;
 
   console.log(`${protocol}://${user}:${password}@${host}`);
 
